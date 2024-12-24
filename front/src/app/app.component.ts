@@ -9,4 +9,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'my-curriculum-vitae';
+  darkBrightMode: 'Mode clair' | 'Mode sombre' | 'Mode Appareil' = 'Mode clair' 
 }
