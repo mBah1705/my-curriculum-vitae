@@ -1,22 +1,25 @@
-<!--
-  Welcome to Tailwind Play, the official Tailwind CSS playground!
-
-  Everything here works just like it does when you're running Tailwind locally
-  with a real build pipeline. You can customize your config file, use features
-  like `@apply`, or even add third-party plugins.
-
-  Feel free to play with this example if you're just learning, or trash it and
-  start from scratch if you know enough to be dangerous. Have fun!
--->
-  <div class="bg-white dark:bg-slate-800">
-    <div class="container mx-auto flex justify-center overflow-hidden bg-gray-50">
-      <main class="bg-emerald-50 flex m-8 w-11/12 h-screen rounded-lg">
-        <div class="size-full flex justify-between">
-          <button class="btn-emerald ">Test</button>
+<div class="bg-white dark:bg-slate-900">
+  <div class="container mx-auto flex justify-center overflow-hidden bg-gray-50 dark:bg-slate-700">
+    <main class="bg-emerald-50 dark:bg-emerald-950 flex m-8 w-11/12 h-screen rounded-lg text-slate-900 dark:text-slate-100 mt-5 text-base font-medium tracking-tight">
+      <div class="size-full flex justify-between">
+        <div class="h-fit w-full flex flex-row justify-between">
+          <section>
+            <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style" (valueChange)="computeMode()">
+              <mat-button-toggle value="bright">Mode clair</mat-button-toggle>
+              <mat-button-toggle value="dark">Mode sombre</mat-button-toggle>
+            </mat-button-toggle-group>
+          </section>
+          <section>
+            <mat-button-toggle-group [(ngModel)]="language" aria-label="Language" (valueChange)="switchLanguage()">
+              <mat-button-toggle value="english">EN</mat-button-toggle>
+              <mat-button-toggle value="french">FR</mat-button-toggle>
+              <mat-button-toggle value="dutch">NL</mat-button-toggle>
+            </mat-button-toggle-group>
+          </section>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   </div>
-
+</div>
 
 <router-outlet />

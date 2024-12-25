@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'selector',
   content: [
     "./src/**/*.{html,ts}",
   ],
-  darkMode: ['selector', '[data-mode="dark"]'],
   theme: {
     extend: {},
   },
