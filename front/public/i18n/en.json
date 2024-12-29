@@ -1,4 +1,8 @@
 {
 	"header.brightMode": "Bright mode",
-	"header.darkMode": "Dark mode"
+	"header.darkMode": "Dark mode",
+	"intro.firstParagraph": "I'm an experienced Frontend developer with 7 years' experience working with Angular (from v2-beta to v17).\n With a solid grounding in TypeScript, I've easily mastered the Swiss army knife that is Angular, and have a wealth of knowledge and best practices in its daily use; including a thorough understanding of component-based architecture, dependency injection and the use of decorators.",
+	"intro.secondParagraph": "When I started diving professionally into the React ecosystem a year ago, I wanted to explore its unique features and philosophies, such as the virtual DOM, TSX, the concepts of hooks, contexts, and other nuggets of this library.",
+	"intro.subtitle": "Confirmed Angular Frontend Developer - 7 years of experience",
+	"intro.thirdParagraph": "But since we have to make a choice! Today with the emergence of AI all around us, and in particular Github Copilot which wonderfully assists developers, Angular becomes even more attractive to me because of its completeness and the reduction of its 'complexity'. Since I now have the luxury of having my code co-piloted, it's better to do it on board of a big Airbus A380 for the challenge, that is to say the complete machine that Angular represents."
 }

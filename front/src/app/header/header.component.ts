@@ -16,11 +16,12 @@ type  Language = 'en' | 'fr' | 'nl'
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  fontStyle = signal<Mode>('bright')
-  language = signal<Language>('fr')
   private readonly _document: Document  = inject(DOCUMENT)
   private readonly localStorage = this._document.defaultView?.localStorage
   private readonly translateService = inject(TranslateService)
+  
+  fontStyle = signal<Mode>('bright')
+  language = signal<Language>(this.translateService.getBrowserLang() as Language || 'fr')
 
   constructor() {
     const matIconRegistry = inject(MatIconRegistry)
