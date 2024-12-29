@@ -1,0 +1,19 @@
+<div class="h-fit w-full flex flex-row justify-between">
+    <section class="flex items-center">
+      <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style" (valueChange)="computeMode()">
+        <mat-button-toggle value="bright">{{ 'header.brightMode' | translate }}</mat-button-toggle>
+        <mat-button-toggle value="dark">{{ 'header.darkMode' | translate }}</mat-button-toggle>
+      </mat-button-toggle-group>
+      <button mat-fab class="ml-3" (click)="navigateToGithubPage()">
+        <mat-icon svgIcon="github" aria-hidden="false" aria-label="Button to the github page" class="mt-2">
+        </mat-icon>
+      </button>
+    </section>
+    <section>
+      <mat-button-toggle-group [(ngModel)]="language" aria-label="Language" (valueChange)="switchLanguage()">
+        <mat-button-toggle value="en">EN</mat-button-toggle>
+        <mat-button-toggle value="fr">FR</mat-button-toggle>
+        <mat-button-toggle value="nl">NL</mat-button-toggle>
+      </mat-button-toggle-group>
+    </section>
+  </div>
