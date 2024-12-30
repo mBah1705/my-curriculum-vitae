@@ -9,5 +9,9 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrl: './content-actions.component.scss'
 })
 export class ContentActionsComponent {
-
+  actions = [
+    'content-actions.professional-experiences',
+    'content-actions.technical-skills',
+    'content-actions.education-and-trainings'
+  ]
 }

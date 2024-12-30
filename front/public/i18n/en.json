@@ -1,4 +1,7 @@
 {
+	"content-actions.education-and-trainings": "Education and Training",
+	"content-actions.professional-experiences": "Professional experiences",
+	"content-actions.technical-skills": "Technical skills",
 	"header.brightMode": "Bright mode",
 	"header.darkMode": "Dark mode",
 	"intro.firstParagraph": "I'm an experienced Frontend developer with 7 years' experience working with Angular (from v2-beta to v17).\n With a solid grounding in TypeScript, I've easily mastered the Swiss army knife that is Angular, and have a wealth of knowledge and best practices in its daily use; including a thorough understanding of component-based architecture, dependency injection and the use of decorators.",

@@ -1,4 +1,7 @@
 {
+	"content-actions.education-and-trainings": "Éducation et formations",
+	"content-actions.professional-experiences": "Expériences professionnelles",
+	"content-actions.technical-skills": "Compétences techniques",
 	"header.brightMode": "Mode clair",
 	"header.darkMode": "Mode sombre",
 	"intro.firstParagraph": "Je suis un développeur Frontend confirmé avec 7 années d'expérience en entreprise avec Angular (de la v2-bêta à la v17).\n Avec une base conséquente en TypeScript, je maîtrise aisément le couteau suisse qu'est Angular et en possède une riche \nconnaissance, de bonnes pratiques dans son utilisation quotidienne; notamment une compréhension approfondie de \nl'architecture basée sur les composants, de l'injection de dépendances (DI) et de l'utilisation de décorateurs.",

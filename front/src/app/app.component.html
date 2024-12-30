@@ -1,12 +1,14 @@
 <div class="bg-white dark:bg-slate-900">
-  <div class="container mx-auto flex justify-center overflow-hidden bg-gray-50 dark:bg-slate-700">
-    <main class="bg-emerald-50 dark:bg-emerald-950 flex m-8 w-11/12 h-screen rounded-lg text-slate-900 dark:text-slate-100 mt-5 text-base font-medium tracking-tight">
-      <div class="size-full flex flex-col gap-16">
+  <div class="container size-fit mx-auto flex justify-center bg-gray-50 dark:bg-slate-700">
+    <main class="bg-emerald-50 dark:bg-emerald-950 flex m-8 w-11/12 h-auto rounded-lg text-slate-900 dark:text-slate-100 mt-5 text-base font-medium tracking-tight">
+      <div class="flex flex-col gap-16">
         <app-header />
         <app-main-intro />
         <app-content-actions />
-        <router-outlet />
-        <!-- <app-progress [value]="value"/> -->
+        <div class="h-dvh">
+          <router-outlet />
+        </div>
+        <!-- <ui-progress [value]="value"/> -->
       </div>
     </main>
   </div>
