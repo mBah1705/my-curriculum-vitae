@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LanguagesComponent } from './languages/languages.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
 
 export const routes: Routes = [
     {
@@ -10,5 +11,9 @@ export const routes: Routes = [
     {
         path: 'languages',
         component: LanguagesComponent
-    }
+    },
+    {
+        path: 'experiences',
+        component: ExperiencesComponent
+    },
 ];
