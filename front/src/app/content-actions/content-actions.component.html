@@ -1,8 +1,8 @@
 <section class="flex place-content-center space-x-4 px-16 flex-wrap gap-4">
     @for(action of actions; track action.title) {
-      <button [routerLink]="action.link" type="button"
-        class="inline-block rounded-full bg-neutral-800 px-6 pb-2 pt-2.5 text-xs font-blod uppercase leading-normal text-slate-100 dark:text-slate-900 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:bg-gray-400 dark:shadow-dark-strong dark:hover:shadow-black/30 dark:focus:shadow-black/30 dark:active:shadow-black/30">
+      <a [routerLink]="action.link" type="button" #btnRef 
+        class="inline-block rounded-full bg-neutral-800 px-6 pb-2 pt-2.5 text-xs font-blod uppercase leading-normal text-slate-100 dark:text-slate-900 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-indigo-900 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-blue-950 active:shadow-dark-2 motion-reduce:transition-none dark:bg-gray-400 dark:shadow-dark-strong dark:hover:shadow-black/30 dark:focus:bg-neutral-700 dark:focus:shadow-black/30 dark:active:shadow-black/30">
         {{action.title | translate }}
-    </button>
+    </a>
     }
 </section>
