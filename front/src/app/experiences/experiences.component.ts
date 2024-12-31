@@ -1,28 +1,12 @@
-import { Component, OnDestroy, OnInit, signal } from '@angular/core';
-import { transition, trigger, useAnimation } from '@angular/animations';
-import { slideAnimation } from '../animations/slide.animation';
+import { Component } from '@angular/core';
+import { BodyMainBaseComponent } from '../body-main-base/body-main-base.component';
 
 @Component({
   selector: 'app-experiences',
-  animations: [
-    trigger('slideToggle', [
-      transition('* => *', [
-        useAnimation(slideAnimation)
-      ])
-    ])
-  ],
-  imports: [],
+  imports: [BodyMainBaseComponent],
   templateUrl: './experiences.component.html',
   styleUrl: './experiences.component.scss'
 })
-export class ExperiencesComponent implements OnInit, OnDestroy {
-  protected showExperiences = signal(false)
+export class ExperiencesComponent extends BodyMainBaseComponent {
 
-  ngOnInit(): void {
-    this.showExperiences.set(true)
-  }
-
-  ngOnDestroy(): void {
-    this.showExperiences.set(false)
-  }
 }

@@ -1,15 +1,5 @@
-<div 
-    [@slideToggle]="{
-        value: showExperiences(),
-        params: {
-            leaveEnd: '300%',
-            enterStart: '-300%',
-            time: '1s',
-            hiddenScale: 0.70
-        }
-    }"
->
-    @if(showExperiences()) {
+<app-body-main-base [templateRef]="experiences">
+    <ng-template #experiences>
         <p>experiences works!</p>
-    }
-</div>
+    </ng-template>
+</app-body-main-base>
