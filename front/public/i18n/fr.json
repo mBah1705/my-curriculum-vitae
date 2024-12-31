@@ -6,6 +6,7 @@
 	"header.brightMode": "Mode clair",
 	"header.darkMode": "Mode sombre",
 	"intro.firstParagraph": "Je suis un développeur Frontend confirmé avec 7 années d'expérience en entreprise avec Angular (de la v2-bêta à la v17).\n Avec une base conséquente en TypeScript, je maîtrise aisément le couteau suisse qu'est Angular et en possède une riche \nconnaissance, de bonnes pratiques dans son utilisation quotidienne; notamment une compréhension approfondie de \nl'architecture basée sur les composants, de l'injection de dépendances (DI) et de l'utilisation de décorateurs.",
+	"intro.quote": "« Tout ce que tu as appris jusqu’à présent n’a de sens que si cela trouve une application » ",
 	"intro.secondParagraph": " En me plongeant, il y a un an, professionnellement dans l'écosystème de React, je souhaitais explorer ses \nfonctionnalités et philosophies uniques, telles que le DOM virtuel, TSX, les concepts de hooks, contexts, et autres pépites de \ncette librairie.",
 	"intro.subtitle": " Développeur Frontend Angular confirmé - 7 années d'expérience",
 	"intro.thirdParagraph": " Mais puisqu'il faut faire un choix ! Aujourd'hui avec l'émergence de l'IA partout autour de nous, et notamment Github Copilot qui \nassiste à merveille les développeurs, Angular redevient pour moi encore plus attrayant à cause de sa complétude et la \nréduction de sa 'complexité'. Puisque j'ai maintenant le luxe de me faire copiloter mon code, vaut mieux le faire à bord d'un \ngros Airbus A380 pour le défi, c'est-à-dire la machine complète que représente Angular."
