@@ -1,13 +1,5 @@
 <div 
-    [@slideToggle]="{
-        value: show(),
-        params: {
-            leaveEnd: '300%',
-            enterStart: '-300%',
-            time: '1s',
-            hiddenScale: 0.70
-        }
-    }"
+    [@routeAnimations]="show()"
 >
     @if(show()) {
         <ng-container *ngTemplateOutlet="templateRef()"></ng-container>

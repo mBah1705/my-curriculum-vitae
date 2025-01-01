@@ -1,16 +1,12 @@
-import { transition, trigger, useAnimation } from '@angular/animations';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Component, input, OnDestroy, OnInit, signal, TemplateRef } from '@angular/core';
-import { slideAnimation } from '../animations/slide.animation';
 import { CommonModule } from '@angular/common';
+import { fadeInAnimation } from '../animations/fade-in.animation';
 
 @Component({
   selector: 'app-body-main-base',
       animations: [
-        trigger('slideToggle', [
-          transition('* => *', [
-            useAnimation(slideAnimation)
-          ])
-        ])
+        fadeInAnimation
       ],
   imports: [CommonModule],
   templateUrl: './body-main-base.component.html',
@@ -18,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class BodyMainBaseComponent  implements OnInit, OnDestroy {
   templateRef = input<TemplateRef<unknown> | null>(null)
-  protected show = signal(false)
+  protected readonly show = signal(false)
   
     ngOnInit(): void {
       this.show.set(true)
