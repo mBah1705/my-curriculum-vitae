@@ -12,18 +12,30 @@ export const routes: Routes = [
     },
     {
         path: 'languages',
-        component: LanguagesComponent
+        component: LanguagesComponent,
+        data: {
+            animation: 'LanguagesPage'
+        }
     },
     {
         path: 'experiences',
-        component: ExperiencesComponent
+        component: ExperiencesComponent,
+        data: {
+            animation: 'ExperiencesPage'
+        }
     },
     {
         path: 'skills',
-        component: SkillsComponent
+        component: SkillsComponent,
+        data: {
+            animation: 'SkillsPage'
+        }
     },
     {
         path: 'education',
-        component: EducationComponent
+        component: EducationComponent,
+        data: {
+            animation: 'EducationPage'
+        }
     },
 ];
