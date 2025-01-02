@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProgressComponent } from '../../ui/progress/progress.component';
+import { ConvertBoolPipe } from '../convert-bool.pipe';
 
 export interface Skill {
   skill: string;
@@ -33,7 +34,7 @@ const ELEMENT_DATA: Skill[] = [
 
 @Component({
   selector: 'app-skills',
-  imports: [MatTableModule, TranslateModule, ProgressComponent],
+  imports: [MatTableModule, TranslateModule, ProgressComponent, ConvertBoolPipe],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })

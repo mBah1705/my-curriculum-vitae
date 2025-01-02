@@ -11,8 +11,10 @@
 	"intro.subtitle": " Développeur Frontend Angular confirmé - 7 années d'expérience",
 	"intro.thirdParagraph": " Mais puisqu'il faut faire un choix ! Aujourd'hui avec l'émergence de l'IA partout autour de nous, et notamment Github Copilot qui \nassiste à merveille les développeurs, Angular redevient pour moi encore plus attrayant à cause de sa complétude et la \nréduction de sa 'complexité'. Puisque j'ai maintenant le luxe de me faire copiloter mon code, vaut mieux le faire à bord d'un \ngros Airbus A380 pour le défi, c'est-à-dire la machine complète que représente Angular.",
 	"skills-table.challenges": "Défis",
+	"skills-table.no": "Non",
 	"skills-table.practicalWeight": "Beaucoup appliqué dans la pratique",
 	"skills-table.skill": "Compétence",
 	"skills-table.theoryWeight": "Bonnes notions théoriques",
-	"skills-table.usedInThisApp": "Utilisé dans cette application de CV"
+	"skills-table.usedInThisApp": "Utilisé dans cette application de CV",
+	"skills-table.yes": "Oui"
 }
