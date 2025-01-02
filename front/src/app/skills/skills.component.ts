@@ -1,34 +1,45 @@
 import { Component } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import { TranslateModule } from '@ngx-translate/core';
+import { ProgressComponent } from '../../ui/progress/progress.component';
+import { ConvertBoolPipe } from '../convert-bool.pipe';
+import { EmphasizeYesComponent } from '../../ui/emphasize-yes/emphasize-yes.component';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+export interface Skill {
+  skill: string;
+  theoryWeight: number;
+  practicalWeight: number;
+  usedInThisApp: boolean,
+  challenges?: string[]
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+const ELEMENT_DATA: Skill[] = [
+  {skill: 'Angular', theoryWeight: 90, practicalWeight: 90, usedInThisApp: true, challenges: ['RxJS, ng-19', 'Angular Material CDK']},
+  {skill: 'Typescript', theoryWeight: 80, practicalWeight: 85, usedInThisApp: true},
+  {skill: 'Javascript', theoryWeight: 80, practicalWeight: 70, usedInThisApp: true},
+  {skill: 'Git', theoryWeight: 60, practicalWeight: 65, usedInThisApp: true, challenges: ['merge', 'rebase', 'cherry-pick', 'revert']},
+  {skill: 'TailwindCSS', theoryWeight: 70, practicalWeight: 75, usedInThisApp: true, challenges: ['Using preprocessors', 'Optimizing for production', 'Manual tweacking']},
+  {skill: 'Angular Material', theoryWeight: 75, practicalWeight: 75, usedInThisApp: true},
+  {skill: 'RxJS', theoryWeight: 75, practicalWeight: 55, usedInThisApp: true, challenges: ['To master operators']},
+  {skill: 'NgRx', theoryWeight: 70, practicalWeight: 55, usedInThisApp: false, challenges: ['To master pattern']},
+  {skill: 'NodeJS', theoryWeight: 65, practicalWeight: 30, usedInThisApp: true, challenges: ['Event programming']},
+  {skill: 'Unit Tests', theoryWeight: 85, practicalWeight: 85, usedInThisApp: true},
+  {skill: 'Express', theoryWeight: 60, practicalWeight: 25, usedInThisApp: true, challenges: ['middlewares', 'templating', 'routing']},
+  {skill: 'HTML/CSS', theoryWeight: 85, practicalWeight: 90, usedInThisApp: true},
+  {skill: 'npm/pnpm', theoryWeight: 55, practicalWeight: 50, usedInThisApp: true},
+  {skill: 'ESLint/Prettier', theoryWeight: 75, practicalWeight: 70, usedInThisApp: false},
+  {skill: 'SSR/SSG (Angular)', theoryWeight: 45, practicalWeight: 55, usedInThisApp: true},
+  {skill: 'PWA (Angular)', theoryWeight: 55, practicalWeight: 65, usedInThisApp: false},
 ];
 
 
 @Component({
   selector: 'app-skills',
-  imports: [MatTableModule],
+  imports: [MatTableModule, TranslateModule, ProgressComponent, ConvertBoolPipe, EmphasizeYesComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['skill', 'theoryWeight', 'practicalWeight', 'usedInThisApp', 'challenges'];
   dataSource = ELEMENT_DATA;
 }

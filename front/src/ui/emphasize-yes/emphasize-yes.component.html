@@ -1,0 +1,5 @@
+@if(value()){
+    <span class="text-lime-500 dark:text-lime-900 bg-clip-content p-1 border-2 border-lime-500 dark:border-lime-900 border-dashed">{{value() | convertBool | translate}}</span>
+} @else {
+    <span class="text-gray-300 dark:text-slate-900 bg-clip-content p-1 border-2 border-gray-300 dark:border-slate-900 border-dashed">{{value() | convertBool | translate}}</span>
+}
