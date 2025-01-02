@@ -6,10 +6,9 @@
         <app-main-intro />
         <div class="py-0.5"></div>
         <app-content-actions />
-        <div class="h-dvh w-full px-24" [@routeAnimations]="prepareRoute(outlet)">
+        <div class="size-full min-h-lvh px-24 mb-10" [@routeAnimations]="prepareRoute(outlet)">
           <router-outlet #outlet="outlet"/>
         </div>
-        <!-- <ui-progress [value]="value"/> -->
       </div>
     </main>
   </div>

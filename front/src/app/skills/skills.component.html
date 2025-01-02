@@ -1,31 +1,33 @@
 <div class="bg-gray-50 dark:bg-slate-700 rounded-xl text-slate-900 dark:text-neutral-300">
     <table mat-table [dataSource]="dataSource">
-
-        <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
-      
-        <!-- Position Column -->
-        <ng-container matColumnDef="position">
-          <th mat-header-cell *matHeaderCellDef> No. </th>
-          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        <!-- Skill Column -->
+        <ng-container matColumnDef="skill">
+          <th mat-header-cell *matHeaderCellDef><span class="font-blod uppercase"><b>{{ 'skills-table.skill' | translate }}</b></span></th>
+          <td mat-cell *matCellDef="let element"> {{element.skill}} </td>
         </ng-container>
       
-        <!-- Name Column -->
-        <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef> Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        <!-- Theory weight Column -->
+        <ng-container matColumnDef="theoryWeight">
+          <th mat-header-cell *matHeaderCellDef><span class="font-blod uppercase"><b>{{ 'skills-table.theoryWeight' | translate }}</b> </span></th>
+          <td mat-cell *matCellDef="let element"><ui-progress [value]="element.theoryWeight" /></td>
         </ng-container>
       
-        <!-- Weight Column -->
-        <ng-container matColumnDef="weight">
-          <th mat-header-cell *matHeaderCellDef> Weight </th>
-          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        <!-- Practical weight Column -->
+        <ng-container matColumnDef="practicalWeight">
+          <th mat-header-cell *matHeaderCellDef><span class="font-blod uppercase"><b>{{ 'skills-table.practicalWeight' | translate }}</b> </span> </th>
+          <td mat-cell *matCellDef="let element"><ui-progress [value]="element.practicalWeight" /></td>
         </ng-container>
       
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="symbol">
-          <th mat-header-cell *matHeaderCellDef> Symbol </th>
-          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        <!-- Used in this app Column -->
+        <ng-container matColumnDef="usedInThisApp">
+          <th mat-header-cell *matHeaderCellDef> <span class="font-blod uppercase"><b>{{ 'skills-table.usedInThisApp' | translate }}</b> </span> </th>
+          <td mat-cell *matCellDef="let element"> {{element.usedInThisApp }} </td>
+        </ng-container>
+      
+        <!-- Challenges Column -->
+        <ng-container matColumnDef="challenges">
+          <th mat-header-cell *matHeaderCellDef> <span class="font-blod uppercase"><b>{{ 'skills-table.challenges' | translate }}</b> </span> </th>
+          <td mat-cell *matCellDef="let element"> {{element.challenges?.join(', ')}} </td>
         </ng-container>
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
