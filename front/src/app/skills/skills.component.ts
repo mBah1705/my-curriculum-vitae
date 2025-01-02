@@ -20,7 +20,7 @@ const ELEMENT_DATA: Skill[] = [
   {skill: 'TailwindCSS', theoryWeight: 70, practicalWeight: 75, usedInThisApp: true, challenges: ['Using preprocessors', 'Optimizing for production', 'Manual tweacking']},
   {skill: 'Angular Material', theoryWeight: 75, practicalWeight: 75, usedInThisApp: true},
   {skill: 'RxJS', theoryWeight: 75, practicalWeight: 55, usedInThisApp: true, challenges: ['To master operators']},
-  {skill: 'NgRx', theoryWeight: 70, practicalWeight: 55, usedInThisApp: false, challenges: ['To master pattern']},
+  {skill: 'NgRx', theoryWeight: 70, practicalWeight: 55, usedInThisApp: false, challenges: ['To master the pattern']},
   {skill: 'NodeJS', theoryWeight: 65, practicalWeight: 30, usedInThisApp: true, challenges: ['Event programming']},
   {skill: 'Unit Tests', theoryWeight: 85, practicalWeight: 85, usedInThisApp: true},
   {skill: 'Express', theoryWeight: 60, practicalWeight: 25, usedInThisApp: true, challenges: ['middlewares', 'templating', 'routing']},

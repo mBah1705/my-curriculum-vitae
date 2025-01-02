@@ -20,10 +20,10 @@ export const fadeInAnimation =
       ], { optional: true }),
       group([
         query(':leave', [
-          animate('2600ms ease-out', style({ opacity: 0, width: '100%'}))
+          animate('900ms ease-out', style({ opacity: 0, width: '100%'}))
         ], { optional: true }),
         query(':enter', [
-          animate('2600ms ease-out', style({ opacity: 1}))
+          animate('1800ms ease-out', style({ opacity: 1}))
         ], { optional: true })
       ]),
     ])

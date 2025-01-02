@@ -7,15 +7,8 @@ import { EducationComponent } from './education/education.component';
 export const routes: Routes = [
     {
         path: '', 
-        redirectTo: 'languages', 
+        redirectTo: 'experiences', 
         pathMatch: 'full'
-    },
-    {
-        path: 'languages',
-        component: LanguagesComponent,
-        data: {
-            animation: 'LanguagesPage'
-        }
     },
     {
         path: 'experiences',
@@ -36,6 +29,13 @@ export const routes: Routes = [
         component: EducationComponent,
         data: {
             animation: 'EducationPage'
+        }
+    },
+    {
+        path: 'languages',
+        component: LanguagesComponent,
+        data: {
+            animation: 'LanguagesPage'
         }
     },
 ];

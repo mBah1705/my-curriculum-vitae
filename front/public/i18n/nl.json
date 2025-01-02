@@ -3,6 +3,12 @@
 	"content-actions.languages": "Talen",
 	"content-actions.professional-experiences": "Professionele ervaringen",
 	"content-actions.technical-skills": "Technische vaardigheden",
+	"education.institution": "Haagse Hogeschool",
+	"education.locality": "Delft",
+	"education.section-title": "Opleiding / Diploma",
+	"education.time": "September 2024",
+	"education.title": "Elektrotechniek",
+	"education.type": "HBO",
 	"header.brightMode": "Heldere modus",
 	"header.darkMode": "Donkere modus",
 	"intro.firstParagraph": "Ik ben een ervaren front-end ontwikkelaar met 7 jaar ervaring in het werken met Angular (van v2-beta tot v17).\n Met een solide basis in TypeScript heb ik het Zwitserse zakmes dat Angular is met gemak onder de knie gekregen, en ik heb een schat aan kennis en beste praktijken  in het dagelijks gebruik ervan; waaronder een grondig begrip van de componentgebaseerde architectuur, afhankelijkheidsinjectie (DI) en het gebruik van decorators.",
@@ -19,5 +25,11 @@
 	"skills-table.skill": "Vaardigheid",
 	"skills-table.theoryWeight": "Goede theoretische inzichten",
 	"skills-table.usedInThisApp": "Gebruikt in deze CV-applicatie",
-	"skills-table.yes": "Ja"
+	"skills-table.yes": "Ja",
+	"trainings.angular.advanced": "Angular - Geavanceerd ",
+	"trainings.angular.complete-guide": "Angular - De complete gids (editie 2024)",
+	"trainings.angular.crash-course": "Angular - Intensieve  cursus voor drukke ontwikkelaars",
+	"trainings.mvc.asp-net": "De volledige ASP.NET MVC 5-cursus",
+	"trainings.node": "Node.JS",
+	"trainings.title": "Opleiding"
 }
