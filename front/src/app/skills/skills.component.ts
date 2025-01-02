@@ -3,6 +3,7 @@ import {MatTableModule} from '@angular/material/table';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProgressComponent } from '../../ui/progress/progress.component';
 import { ConvertBoolPipe } from '../convert-bool.pipe';
+import { EmphasizeYesComponent } from '../../ui/emphasize-yes/emphasize-yes.component';
 
 export interface Skill {
   skill: string;
@@ -27,14 +28,14 @@ const ELEMENT_DATA: Skill[] = [
   {skill: 'HTML/CSS', theoryWeight: 85, practicalWeight: 90, usedInThisApp: true},
   {skill: 'npm/pnpm', theoryWeight: 55, practicalWeight: 50, usedInThisApp: true},
   {skill: 'ESLint/Prettier', theoryWeight: 75, practicalWeight: 70, usedInThisApp: false},
-  {skill: 'SSR (Angular)', theoryWeight: 45, practicalWeight: 55, usedInThisApp: true},
+  {skill: 'SSR/SSG (Angular)', theoryWeight: 45, practicalWeight: 55, usedInThisApp: true},
   {skill: 'PWA (Angular)', theoryWeight: 55, practicalWeight: 65, usedInThisApp: false},
 ];
 
 
 @Component({
   selector: 'app-skills',
-  imports: [MatTableModule, TranslateModule, ProgressComponent, ConvertBoolPipe],
+  imports: [MatTableModule, TranslateModule, ProgressComponent, ConvertBoolPipe, EmphasizeYesComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
