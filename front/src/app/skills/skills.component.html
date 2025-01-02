@@ -21,7 +21,7 @@
         <!-- Used in this app Column -->
         <ng-container matColumnDef="usedInThisApp">
           <th mat-header-cell *matHeaderCellDef> <span class="font-bold uppercase"><b>{{ 'skills-table.usedInThisApp' | translate }}</b> </span> </th>
-          <td mat-cell *matCellDef="let element"> <ui-emphasize-yes [value]="element.usedInThisApp" /> </td>
+          <td mat-cell *matCellDef="let element"> <div class="flex place-content-center"><ui-emphasize-yes [value]="element.usedInThisApp" /></div> </td>
         </ng-container>
       
         <!-- Challenges Column -->
