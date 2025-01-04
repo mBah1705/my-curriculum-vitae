@@ -1,8 +1,23 @@
-<div class=" bg-gray-50 dark:bg-slate-700 rounded-xl text-slate-900 dark:text-neutral-300 py-8 divide-y dark:divide-slate-600">
-    @for(language of languages; track language.item) {
-        <div class="px-8 flex justify-between items-center bg-gray-50 dark:bg-slate-700 text-slate-900 dark:text-neutral-300 py-4">
-            <span>{{ language.item | translate }}</span>
-            <div class="w-4/5"><ui-progress [value]="language.value"/></div>
-        </div>
-    }
+<div class=" bg-gray-50 dark:bg-slate-700 rounded-xl text-slate-900 dark:text-neutral-300 py-2">
+    <table mat-table [dataSource]="languages">
+        <ng-container matColumnDef="item">
+          <th mat-header-cell *matHeaderCellDef><span class="font-bold uppercase"><b>{{ 'languages.item-title' | translate }}</b></span></th>
+          <td mat-cell *matCellDef="let element"><span class="font-semibold">{{element.item | translate}}</span> </td>
+        </ng-container>
+      
+        <!-- Theory weight Column -->
+        <ng-container matColumnDef="verbalWeight">
+          <th mat-header-cell *matHeaderCellDef><span class="font-bold uppercase"><b>{{ 'languages.verbalWeight-title' | translate }}</b> </span></th>
+          <td mat-cell *matCellDef="let element"><ui-progress [value]="element.verbalWeight" /></td>
+        </ng-container>
+      
+        <!-- Practical weight Column -->
+        <ng-container matColumnDef="writtenWeight">
+          <th mat-header-cell *matHeaderCellDef><span class="font-bold uppercase"><b>{{ 'languages.writtenWeight-title' | translate }}</b> </span> </th>
+          <td mat-cell *matCellDef="let element"><ui-progress [value]="element.writtenWeight" /></td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table> 
 </div>
