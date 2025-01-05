@@ -1,1 +1,33 @@
-<p>experiences works!</p>
+<div class=" bg-gray-50 dark:bg-slate-700 rounded-xl text-slate-900 dark:text-neutral-300 py-2 flex flex-row place-content-evenly divide-x">
+    @for (experience of experiences(); track experience.id) {
+        <div class="w-1/{{experiences().length}} p-4">
+            <p class="font-mono text-sm font-bold">
+                {{experience.startTime | translate }} - {{experience.endTime | translate }}
+            </p>
+            <p>
+                <span class="text-2xl text-indigo-800 dark:text-lime-900 font-extrabold uppercase">
+                    {{experience.title | translate }},&nbsp;
+                </span>
+                <span class="text-2xl uppercase">
+                    {{experience.enterprise | translate }}
+                </span>
+            </p>
+            <p class="font-serif">
+               <span class="font-bold">{{'experiences.context' | translate }}&nbsp;</span>
+               <span class="text-sm">{{experience.content.context | translate }}</span>
+            </p>
+            <p class="font-serif">
+                <span class="font-bold">{{'experiences.project' | translate }}&nbsp;</span>
+               <span class="text-sm">{{experience.content.project | translate }}</span>
+            </p>
+            <div class="font-serif">
+                <span class="font-bold">{{'experiences.tasks' | translate }}&nbsp;</span>
+                <ul>
+                    @for (task of experience.content.tasks; track task.taskId) {
+                        <li class="text-sm">{{task.taskItem| translate }}&nbsp;</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+</div>
