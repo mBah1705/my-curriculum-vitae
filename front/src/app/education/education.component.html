@@ -1,1 +1,22 @@
-<p>education works!</p>
+<div class="px-8 bg-gray-50 dark:bg-slate-700 rounded-xl text-slate-900 dark:text-neutral-300 py-2 divide-y dark:divide-slate-600">
+    <div class="flex justify-center flex-col items-center divide-y">
+        <div class="py-4"><h4 class="text-xl underline decoration-4 decoration-indigo-800 dark:decoration-neutral-700 uppercase font-semibold"><b>{{ 'education.section-title' | translate }}</b></h4></div>
+        <div class="flex justify-between items-center bg-gray-50 dark:bg-slate-700 text-slate-900 dark:text-neutral-300 py-4 uppercase">
+            <span class="font-mono font-semibold mr-4 w-1/7">{{ education.time | translate }}</span>
+            <span class="text-2xl text-indigo-800 dark:text-lime-900 w-2/7 px-4 font-extrabold"><b>{{ education.title | translate }} : {{ education.type | translate }}</b></span>
+            <div class="w-4/5 font-serif italic font-light w-auto">{{ education.institution | translate}} - {{ education.locality | translate }}</div>
+        </div>
+    </div>
+    <div class="flex justify-center flex-col items-center divide-y">
+        <div class="py-4"><h4 class="text-xl underline decoration-4 decoration-indigo-800 dark:decoration-neutral-700 uppercase font-semibold"><b>{{ 'trainings.title' | translate }}</b></h4></div>
+        <div class="flex flex-row place-content-evenly divide-x">
+            @for(training of trainings; track training.topic) {
+                <div class="flex justify-center flex-col items-center p-2 w-1/5">
+                    <p class="w-4/5 font-sans italic font-light">{{ training.topic | translate }}</p>
+                    <p class="font-mono font-semibold">{{ training.institution | translate }}</p>
+                    <p class="text-2xl text-indigo-800 dark:text-lime-900 font-extrabold">{{ training.completionYear }}</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
