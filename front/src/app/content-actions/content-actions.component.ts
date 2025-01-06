@@ -3,6 +3,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import {MatButtonModule} from '@angular/material/button';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
+import { CONTENT_ACTIONS_DATA } from './content-actions.data';
 
 @Component({
   selector: 'app-content-actions',
@@ -11,24 +12,7 @@ import { DOCUMENT } from '@angular/common';
   styleUrl: './content-actions.component.scss'
 })
 export class ContentActionsComponent implements OnInit, AfterViewInit {
-  actions = [
-    {
-      title: 'content-actions.professional-experiences',
-      link: '/experiences',
-    },
-    {
-      title: 'content-actions.technical-skills',
-      link: '/skills',
-    },
-    {
-      title: 'content-actions.education-and-trainings',
-      link: '/education',
-    },
-    {
-      title: 'content-actions.languages',
-      link: '/languages',
-    },    
-  ]
+  actions = CONTENT_ACTIONS_DATA
   
   private readonly _document: Document  = inject(DOCUMENT)
   private readonly router = inject(Router)
@@ -54,5 +38,4 @@ export class ContentActionsComponent implements OnInit, AfterViewInit {
       }
     })
   }
-
 }
