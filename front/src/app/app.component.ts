@@ -4,10 +4,11 @@ import { HeaderComponent } from './header/header.component';
 import { MainIntroComponent } from "./main-intro/main-intro.component";
 import { ContentActionsComponent } from "./content-actions/content-actions.component";
 import { fadeInAnimation } from './animations/fade-in.animation';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, MainIntroComponent, ContentActionsComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, MainIntroComponent, ContentActionsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [
