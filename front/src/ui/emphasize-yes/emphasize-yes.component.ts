@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { ConvertBoolPipe } from '../../app/convert-bool.pipe';
+import { ConvertBoolPipe } from '../../app/convert-bool/convert-bool.pipe';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
