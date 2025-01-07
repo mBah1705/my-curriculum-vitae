@@ -18,8 +18,6 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'my-curriculum-vitae'
-  value = 93
-
   
   prepareRoute(outlet: RouterOutlet) {
     return outlet?.activatedRouteData?.['animation']

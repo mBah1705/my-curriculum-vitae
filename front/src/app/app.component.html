@@ -4,7 +4,6 @@
     <main class="bg-emerald-50 dark:bg-emerald-950 flex m-16 h-auto rounded-lg text-slate-900 dark:text-neutral-300 mt-5 text-base font-medium tracking-tight">
       <div class="flex flex-col gap-10">
         <app-main-intro />
-        <div class="py-0.5"></div>
         <app-content-actions />
         <div class="size-full min-h-lvh px-2 xl:px-24 mb-10" [@routeAnimations]="prepareRoute(outlet)">
           <router-outlet #outlet="outlet"/>

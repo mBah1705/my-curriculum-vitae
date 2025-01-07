@@ -21,16 +21,18 @@ export class HeaderComponent {
   private readonly translateService = inject(TranslateService)
   
   fontStyle = signal<Mode>('bright')
-  language = signal<Language>(this.translateService.getBrowserLang() as Language || 'fr')
+  language = signal<Language>(
+    (this.translateService.getBrowserLang() === 'en' || 
+    this.translateService.getBrowserLang() === 'fr'  || 
+    this.translateService.getBrowserLang() === 'nl') ? this.translateService.getBrowserLang() as Language :
+     'fr')
 
   constructor() {
     const matIconRegistry = inject(MatIconRegistry)
     const domSanitizer = inject(DomSanitizer)
     matIconRegistry.addSvgIcon('github', domSanitizer.bypassSecurityTrustResourceUrl('/assets/github.svg'))
-
     this.translateService.addLangs(['fr', 'en', 'nl'])
-    this.translateService.setDefaultLang('fr')
-    this.translateService.use('fr')
+
   }
 
   computeMode = computed(() => {
