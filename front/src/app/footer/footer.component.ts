@@ -9,7 +9,6 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class FooterComponent {
   navigateToLinkedInPage() {
-    window.open('https://www.linkedin.com/in/mamadou-bah-guinee/', "_blank")
-
+    window.open('https://www.linkedin.com/in/mamadou-bah-guinee/', '_blank')
   }
 }
