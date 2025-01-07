@@ -1,6 +1,6 @@
-<div class=" bg-gray-50 dark:bg-slate-700 rounded-xl text-slate-900 dark:text-neutral-300 py-2 flex flex-row place-content-evenly divide-x">
+<div class="bg-gray-50 dark:bg-slate-700 rounded-xl text-slate-900 dark:text-neutral-300 py-2 flex flex-col place-content-evenly max-xl:divide-y xl:flex-row xl:divide-x">
     @for (experience of experiences(); track experience.id) {
-        <div class="w-1/{{experiences().length}} p-4">
+        <div class="xl:w-1/4 p-4">
             <p class="font-mono text-sm font-bold">
                 {{experience.startTime | translate }} - {{experience.endTime | translate }}
             </p>
