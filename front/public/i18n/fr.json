@@ -1,4 +1,5 @@
 {
+	"an-error-occured": "Une erreur est survenue; veuillez réessayer plus tard.",
 	"avivAngular.content.context": " Groupe spécialisé dans l'édition de sites web d’annonces immobilières",
 	"avivAngular.content.project": " Gestion du site dédié aux professionnels de l’immobilier (back-office) et du site de dépôt d’annonces de location, viager et vente de professionnels comme de particuliers, au sein d’une équipe pluridisciplinaire de taille assez variante dans le temps (donc une aptitude à travailler autant dans une équipe d’envergure assez conséquente que travailler comme seul développeur front de l’équipe)",
 	"avivAngular.content.tasks.1": "Développement, maintien, optimisation et test d'applications",
