@@ -1,5 +1,6 @@
 <div class="bg-gray-50 dark:bg-slate-700 rounded-xl text-slate-900 dark:text-neutral-300 py-2">
-    <table mat-table [dataSource]="dataSource">
+    @if (dataSource.length) {
+      <table mat-table [dataSource]="dataSource">
         <!-- Skill Column -->
         <ng-container matColumnDef="skill">
           <th mat-header-cell *matHeaderCellDef><span class="font-bold uppercase"><b>{{ 'skills-table.skill' | translate }}</b></span></th>
@@ -32,6 +33,9 @@
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>           
+    </table>  
+    } @else {
+      <p class="flex place-content-center text-red-800 dark:text-red-300">{{ 'an-error-occured'  | translate }}</p>
+    }         
 </div>
 
