@@ -1,6 +1,6 @@
 [build]
-  publish = "dist/my-curriculum-vitae/browser"
-  command = "ng build"
+  publish = "front/dist/my-curriculum-vitae/browser"
+  command = "ng build --configuration production"
 
 
 [[redirects]]
