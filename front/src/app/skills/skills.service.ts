@@ -7,7 +7,7 @@ import { catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillsService {
-  private readonly url = 'http://localhost:5200'
+  private readonly url = 'https://my-curriculum-vitae-g5sp.onrender.com'
 
   skillsData = signal<Skill[]>([])
 
