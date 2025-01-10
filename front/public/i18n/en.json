@@ -62,6 +62,7 @@
 	"languages.item-title": "Language",
 	"languages.verbalWeight-title": "Oral",
 	"languages.writtenWeight-title": "Writing",
+	"page-not-found": "The page could not be found.",
 	"qDelft.content.context": "Web software publisher",
 	"qDelft.content.project": "Teacher career management solution (300,000 teachers) for CIBG (part of the Dutch Ministry of Education, Sport and Welfare) within a team of 15 people including 8 developers",
 	"qDelft.content.tasks.1": "Creation of reusable components within a UI library",

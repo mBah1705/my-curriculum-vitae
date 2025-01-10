@@ -62,6 +62,7 @@
 	"languages.item-title": "Langue",
 	"languages.verbalWeight-title": "Oral",
 	"languages.writtenWeight-title": "Écrit",
+	"page-not-found": "La page est introuvable.",
 	"qDelft.content.context": " Éditeur de logiciels web",
 	"qDelft.content.project": "Solution de gestion de carrière des enseignants (300 000 enseignants) pour le CIBG (organe du ministère néerlandais de l’éducation, du sport et du bien-être) au sein d’une équipe de 15 personnes dont 8 développeurs",
 	"qDelft.content.tasks.1": "Réalisation de composants réutilisables au sein d’une librairie UI",

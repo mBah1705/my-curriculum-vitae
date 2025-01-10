@@ -3,13 +3,9 @@ import { LanguagesComponent } from './languages/languages.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { SkillsComponent } from './skills/skills.component';
 import { EducationComponent } from './education/education.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
-    {
-        path: '', 
-        redirectTo: 'experiences', 
-        pathMatch: 'full'
-    },
     {
         path: 'experiences',
         component: ExperiencesComponent,
@@ -38,4 +34,17 @@ export const routes: Routes = [
             animation: 'LanguagesPage'
         }
     },
+    {
+        path: '', 
+        redirectTo: '/experiences', 
+        pathMatch: 'full'
+    },
+    {
+        path: '**',
+        component: PageNotFoundComponent,
+        data: {
+            animation: 'PageNotFoundPage'
+        }
+    },
+
 ];
