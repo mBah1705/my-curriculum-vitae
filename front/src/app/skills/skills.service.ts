@@ -32,6 +32,6 @@ export class SkillsService {
 
   fetchSkills = () => {
     this.refreshSkills$().subscribe(data => this.skillsData.set(data))
-    return this.skillsData()
+    return this.skillsData
   }
 }
