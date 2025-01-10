@@ -21,6 +21,5 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSource = this.skillsFetcher.fetchSkills()
-    
   }
 }
