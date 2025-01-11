@@ -2,3 +2,9 @@
   publish = "dist/my-curriculum-vitae/browser"
   command = "ng build --configuration production"
 
+
+[[redirects]]
+  from = "/"
+  to = "/experiences"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
