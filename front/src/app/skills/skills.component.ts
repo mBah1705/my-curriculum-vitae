@@ -16,7 +16,7 @@ import { Skill } from './skill.model';
 export class SkillsComponent {
   displayedColumns: string[] = ['skill', 'theoryWeight', 'practicalWeight', 'usedInThisApp', 'challenges']
   dataSource = signal<Skill[]>([])
-  skeletonArray = Array(16).keys()
+  skeletonArray = [...Array(16).keys()]
   skillsFetcher = inject(SkillsService)
 
   constructor() {
