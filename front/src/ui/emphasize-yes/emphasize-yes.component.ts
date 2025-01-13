@@ -10,5 +10,4 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class EmphasizeYesComponent {
   value = input.required<boolean | undefined>()
-
 }
