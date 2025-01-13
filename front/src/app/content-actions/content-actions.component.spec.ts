@@ -3,10 +3,11 @@ import { ContentActionsComponent } from './content-actions.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatButtonModule } from '@angular/material/button';
 import { By } from '@angular/platform-browser';
-import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { DebugElement, ElementRef, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NavigationEnd, provideRouter, Router } from '@angular/router';
+import { Subject } from 'rxjs';
 
-fdescribe('ContentActionsComponent', () => {
+describe('ContentActionsComponent', () => {
   let component: ContentActionsComponent;
   let fixture: ComponentFixture<ContentActionsComponent>;
 
@@ -39,10 +40,26 @@ fdescribe('ContentActionsComponent', () => {
   });
 
   it('should render buttons for each action', () => {
-    const buttons: DebugElement[] = fixture.debugElement.queryAll(By.css('a[type="button"]'));
-    console.log(fixture.debugElement);
-    
+    const buttons: DebugElement[] = fixture.debugElement.queryAll(By.css('a[type="button"]'));    
     expect(buttons.length).toBe(component.actions.length);
+  });
+
+  it('should focus the active button on navigation end', () => {
+    const mockUrl = '/mock-url';
+    const mockEvent = new NavigationEnd(1, mockUrl, mockUrl);
+    const mockButton = document.createElement('a');
+    mockButton.href = mockUrl;
+    const mockElementRef = new ElementRef(mockButton);
+
+    spyOn(component.btnRefs(), 'find').and.returnValue(mockElementRef);
+    const focusSpy = spyOn(mockElementRef.nativeElement, 'focus')
+    component.ngAfterViewInit();
+    const router = TestBed.inject(Router);
+    (router.events as Subject<any>).next(mockEvent);
+    fixture.detectChanges();
+
+    expect(component.activeBtn).toBe(mockElementRef);
+    expect(focusSpy).toHaveBeenCalledWith({ preventScroll: true });
   });
 
   it('should unsubscribe from router events on destroy', () => {
