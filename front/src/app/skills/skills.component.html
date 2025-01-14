@@ -36,10 +36,12 @@
       </table>
     } @else if (dataSource().length === 0) {
       <div class="rounded-lg p-4 w-full mx-auto">
-        <div class="animate-pulse flex space-x-4">
-          <div class="py-1 flex-1 space-y-16">
-            <div class="h-1.5 bg-gray-300 dark:bg-slate-900 rounded"></div>
-            <div class="space-y-12 flex flex-col">
+        <div class="flex space-x-4">
+          <div class="py-1 flex-1">
+            <div class="w-full flex items-center justify-center">
+              <p class="font-bold uppercase text-slate-900 dark:text-neutral-300">{{'be-patient' | translate}}</p>
+            </div>
+            <div class="animate-pulse space-y-12 flex flex-col">
               @for (item of skeletonArray; track item) {
                 <div class="h-1.5 bg-gray-300 dark:bg-slate-900 rounded mt-4"></div>
               }
