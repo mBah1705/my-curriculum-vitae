@@ -6,7 +6,7 @@ import { SkillsService } from './skills.service';
 import { signal } from '@angular/core';
 import { Skill } from './skill.model';
 
-fdescribe('SkillsComponent', () => {
+describe('SkillsComponent', () => {
   let component: SkillsComponent;
   let fixture: ComponentFixture<SkillsComponent>;
 
