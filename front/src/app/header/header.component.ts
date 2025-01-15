@@ -21,6 +21,7 @@ export class HeaderComponent {
   private readonly translateService = inject(TranslateService)
   
   fontStyle = signal<Mode>('bright')
+  
   language = signal<Language>(
     (this.translateService.getBrowserLang() === 'en' || 
     this.translateService.getBrowserLang() === 'fr'  || 
@@ -44,7 +45,9 @@ export class HeaderComponent {
     }
   })
 
-  switchLanguage = computed(() => this.translateService.use(this.language()))
+  switchLanguage = () => {
+    this.translateService.use(this.language())
+  }
 
   navigateToGithubPage = () => {
     window.open('https://github.com/mBah1705/my-curriculum-vitae', "_blank")

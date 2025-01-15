@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EducationComponent } from './education.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('EducationComponent', () => {
   let component: EducationComponent;
@@ -8,7 +9,7 @@ describe('EducationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EducationComponent]
+      imports: [EducationComponent, TranslateModule.forRoot()]
     })
     .compileComponents();
 

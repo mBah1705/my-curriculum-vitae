@@ -8,5 +8,4 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './page-not-found.component.scss'
 })
 export class PageNotFoundComponent {
-
 }

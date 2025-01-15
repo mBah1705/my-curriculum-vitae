@@ -17,8 +17,6 @@ import { FooterComponent } from './footer/footer.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'my-curriculum-vitae'
-  
   prepareRoute(outlet: RouterOutlet) {
     return outlet?.activatedRouteData?.['animation']
   }
