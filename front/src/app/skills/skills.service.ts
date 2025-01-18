@@ -1,5 +1,5 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { inject, Injectable, signal } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Skill } from './skill.model';
 import { catchError, throwError } from 'rxjs';
 
@@ -9,11 +9,9 @@ import { catchError, throwError } from 'rxjs';
 export class SkillsService {
   private readonly url = 'https://my-curriculum-vitae-g5sp.onrender.com'
 
-  skillsData = signal<Skill[]>([])
-
   httpClient = inject(HttpClient)
 
-  private readonly refreshSkills$ = () => this.httpClient.get<Skill[]>(this.url).pipe(
+  readonly fetchSkills$ = () => this.httpClient.get<Skill[]>(this.url).pipe(
     catchError((error: HttpErrorResponse) => {
       if(error.status === 0) {
         // A client-side or network error occurred. Handle it accordingly.
@@ -29,9 +27,4 @@ export class SkillsService {
       return throwError(() => new Error('Something bad happened; please try again later.'))
     })
   )
-
-  fetchSkills = () => {
-    this.refreshSkills$().subscribe(data => this.skillsData.set(data))
-    return this.skillsData
-  }
 }

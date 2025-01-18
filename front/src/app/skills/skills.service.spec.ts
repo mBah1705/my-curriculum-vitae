@@ -47,7 +47,7 @@ describe('SkillsService', () => {
   });
 
   it('should fetch skills', () => {    
-    service['refreshSkills$']().subscribe(data => {
+    service['fetchSkills$']().subscribe(data => {
       expect(data).toEqual(mockSkills);
     });
 
@@ -57,7 +57,7 @@ describe('SkillsService', () => {
   });
 
   it('should handle error when fetching skills', () => {
-    service['refreshSkills$']().subscribe({
+    service['fetchSkills$']().subscribe({
       next: () => fail('should have failed with the 404 error'),
       error: (e) => {
         expect(e.message).toContain('Something bad happened; please try again later.');
@@ -67,13 +67,4 @@ describe('SkillsService', () => {
     const req = httpTestingController.expectOne('https://my-curriculum-vitae-g5sp.onrender.com');
     req.flush('Invalid request', {status: 404, statusText: 'Not Found'});
   });
-
-  it('should set skillsData with the fetched skills', () => {
-    service.fetchSkills();
-    
-    const req = httpTestingController.expectOne('https://my-curriculum-vitae-g5sp.onrender.com');
-    req.flush(mockSkills)
-    expect(service.skillsData()).toEqual(mockSkills);
-  });
-
 });
