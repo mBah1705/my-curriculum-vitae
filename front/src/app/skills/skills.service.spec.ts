@@ -47,7 +47,7 @@ describe('SkillsService', () => {
   });
 
   it('should fetch skills', () => {    
-    service['fetchSkills$']().subscribe(data => {
+    service.fetchSkills$().subscribe(data => {
       expect(data).toEqual(mockSkills);
     });
 
@@ -57,7 +57,7 @@ describe('SkillsService', () => {
   });
 
   it('should handle error when fetching skills', () => {
-    service['fetchSkills$']().subscribe({
+    service.fetchSkills$().subscribe({
       next: () => fail('should have failed with the 404 error'),
       error: (e) => {
         expect(e.message).toContain('Something bad happened; please try again later.');
