@@ -3,16 +3,15 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SkillsComponent } from './skills.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { SkillsService } from './skills.service';
-import { signal } from '@angular/core';
-import { Skill } from './skill.model';
+import { of } from 'rxjs';
 
 describe('SkillsComponent', () => {
   let component: SkillsComponent;
   let fixture: ComponentFixture<SkillsComponent>;
 
   const skillsServiceStub = {
-    fetchSkills: () => {
-      return signal<Skill[]>([{
+    fetchSkills$: () => {
+      return of([{
         skill: 'test-skill',
         theoryWeight: 1,
         practicalWeight: 1,
@@ -25,7 +24,7 @@ describe('SkillsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [SkillsComponent, TranslateModule.forRoot()],
-      providers: [{ provide: SkillsService, useValue: skillsServiceStub }]
+      providers: [{provide: SkillsService, useValue: skillsServiceStub}],
     })
     .compileComponents();
 
